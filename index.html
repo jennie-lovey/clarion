@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clarion — Get smarter answers with AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,700&family=Syne:wght@400;500&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=6" />
+</head>
+<body>
+  <div class="page">
+    <img class="top-glow" src="assets/top-glow.svg" width="3299" height="1804" alt="" aria-hidden="true" />
+
+    <!-- Hero -->
+    <header class="hero">
+      <nav class="nav">
+        <a class="logo" href="#">Clarion</a>
+        <ul class="nav-links">
+          <li><a href="#platform">Platform</a></li>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="#" class="nav-login">Login</a>
+          <a href="#pricing" class="btn btn-dark btn-nav">Get started</a>
+          <button type="button" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+        </div>
+      </nav>
+
+      <div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Site menu">
+        <div class="menu-backdrop" data-menu-close></div>
+        <div class="menu-panel" tabindex="-1">
+          <ul class="menu-links">
+            <li style="--i:0"><a href="#platform"><span>Platform</span><small>01</small></a></li>
+            <li style="--i:1"><a href="#how"><span>How it works</span><small>02</small></a></li>
+            <li style="--i:2"><a href="#pricing"><span>Pricing</span><small>03</small></a></li>
+            <li style="--i:3"><a href="#faq"><span>FAQ</span><small>04</small></a></li>
+          </ul>
+          <div class="menu-actions">
+            <a href="#" class="btn btn-outline">Login</a>
+            <a href="#pricing" class="btn btn-dark">Get started</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-copy reveal">
+        <h1 class="split">Get smarter answers with AI</h1>
+        <p>Get clear, practical AI answers to your toughest business questions and make better decisions, faster.</p>
+        <div class="btn-row">
+          <a href="#pricing" class="btn btn-dark btn-lg">Start free trail</a>
+          <a href="#how" class="btn btn-outline btn-md">See how it works</a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <img class="hero-img" src="assets/hero-forest.jpg" alt="Misty pine forest" />
+        <form class="chat chat-hero" onsubmit="return false">
+          <label class="sr-only" for="hero-q">Ask a question</label>
+          <input id="hero-q" type="text" value="Why did our margin drop in Q2?" />
+          <div class="chat-row">
+            <button type="button" class="icon-btn" aria-label="Attach"><img src="assets/plus.svg" width="24" height="24" alt="" /></button>
+            <button type="submit" class="send" aria-label="Send"><img src="assets/send.svg" width="22.0176" height="22.0176" alt="" /></button>
+          </div>
+        </form>
+      </div>
+    </header>
+
+    <!-- Problem -->
+    <section class="problem" id="platform">
+      <div class="problem-intro reveal">
+        <span class="pill">The problem</span>
+        <h2 class="split">Good decisions shouldn’t require a data team</h2>
+      </div>
+      <div class="problem-grid">
+        <p class="problem-lede reveal">Ask questions in plain language and let AI turn complex business data into clear, actionable answers. Understand what’s driving your performance, spot trends before they become problems, and uncover opportunities you might otherwise miss.</p>
+        <div class="stat reveal">
+          <span>Business guided</span>
+          <strong data-count="12" data-suffix="k">12k</strong>
+        </div>
+        <div class="stat reveal">
+          <span>Message answered</span>
+          <strong data-count="20" data-suffix="k">20k</strong>
+        </div>
+        <div class="stat reveal">
+          <span>Faster reply</span>
+          <strong data-count="92" data-suffix="%">92%</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+      <h2 class="section-title split">Built to think like your smartest advisor</h2>
+      <div class="feature-grid">
+        <article class="feature reveal">
+          <span class="feature-num" data-roll>01</span>
+          <div><h3>Intsant clarity</h3><p>Straight answers are pulled from<br />your data and not generic advice</p></div>
+        </article>
+        <article class="feature reveal">
+          <span class="feature-num" data-roll>02</span>
+          <div><h3>Actionable playbook</h3><p>Every answrs comes with the<br />concrete next steps to fix it.</p></div>
+        </article>
+        <article class="feature reveal">
+          <span class="feature-num" data-roll>03</span>
+          <div><h3>Full context</h3><p>Understand your business,size and<br />history to give the best response</p></div>
+        </article>
+        <article class="feature reveal">
+          <span class="feature-num" data-roll>04</span>
+          <div><h3>Transparent reasoning</h3><p>See exactly whch data and sources shapes every answer with a score</p></div>
+        </article>
+        <article class="feature reveal">
+          <span class="feature-num" data-roll>05</span>
+          <div><h3>Works where you work</h3><p>Ask from slack, email&nbsp; and your own<br />dashboard answers will meet you</p></div>
+        </article>
+        <article class="feature reveal">
+          <span class="feature-num" data-roll>06</span>
+          <div><h3>Your data stays yours.</h3><p>AI to explore sensitive information without compromising control.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="how" id="how">
+      <h2 class="section-title split">From business questions to clear answers</h2>
+      <div class="how-grid">
+        <article class="step reveal">
+          <div class="step-visual">
+            <div class="chat chat-step">
+              <p class="ask-text">Why did our margin drop in Q2?</p>
+              <div class="chat-row">
+                <img src="assets/plus.svg" width="24" height="24" alt="" />
+                <span class="send ask-send"><img src="assets/send.svg" width="22.0176" height="22.0176" alt="" /></span>
+              </div>
+            </div>
+          </div>
+          <div class="step-copy"><h3>Ask</h3><p>Type any question in plain language&nbsp; and<br />get answers from any platform</p></div>
+        </article>
+
+        <article class="step reveal">
+          <div class="step-visual">
+            <div class="chart" aria-label="Chart trending up from 1k to 20k between Aug and Nov">
+              <img class="grid-line" style="left:54px;top:17px" src="assets/chart-gridline.svg" width="1" height="118" alt="" />
+              <img class="grid-line" style="left:102.5px;top:17.5px" src="assets/chart-gridline.svg" width="1" height="118" alt="" />
+              <img class="grid-line" style="left:151px;top:18px" src="assets/chart-gridline.svg" width="1" height="118" alt="" />
+              <img class="grid-line" style="left:199.5px;top:18.5px" src="assets/chart-gridline.svg" width="1" height="118" alt="" />
+              <img class="grid-line" style="left:248px;top:19px" src="assets/chart-gridline.svg" width="1" height="118" alt="" />
+              <img class="grid-line" style="left:296.5px;top:19.5px" src="assets/chart-gridline.svg" width="1" height="118" alt="" />
+              <img class="grid-line" style="left:341px;top:19.5px" src="assets/chart-gridline.svg" width="1" height="118" alt="" />
+              <span class="y" style="top:27px" data-count="20" data-suffix="k">20k</span>
+              <span class="y" style="top:66px" data-count="10" data-suffix="k">10k</span>
+              <span class="y" style="top:113px" data-count="1" data-suffix="k">1k</span>
+              <span class="x" style="left:131px">Aug</span>
+              <span class="x" style="left:179px">Sep</span>
+              <span class="x" style="left:227px">Oct</span>
+              <span class="x" style="left:279px">Nov</span>
+              <span class="x" style="left:324px">Dec</span>
+              <div class="chart-line"><img src="assets/chart-line.svg" width="259.045" height="93.1021" alt="" /></div>
+              <span class="chart-pulse" aria-hidden="true"></span>
+              <img class="chart-point" src="assets/chart-point.svg" width="37" height="37" alt="" />
+            </div>
+          </div>
+          <div class="step-copy"><h3>Analyze</h3><p>Connect your business data,&nbsp; trends, and<br />uncover insights that help you make smarter.</p></div>
+        </article>
+
+        <article class="step reveal">
+          <div class="step-visual">
+            <div class="chat chat-reco">
+              <span class="reco-label">AI recommendation</span>
+              <span class="reco-impact">High impact</span>
+              <p class="reco-title">Increase retention<br />campaign</p>
+              <span class="tag tag-1" style="left:16px;top:89.5px">Email</span>
+              <span class="tag tag-2" style="left:74px;top:90.5px">Offers</span>
+              <span class="tag tag-3" style="left:138px;top:90.5px">Returning customers</span>
+              <span class="send reco-send"><img src="assets/send.svg" width="22.0176" height="22.0176" alt="" /></span>
+            </div>
+          </div>
+          <div class="step-copy"><h3>Decide</h3><p>Turn AI-powered insights into clear next steps<br />&nbsp;and good business decisions based on data</p></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing" id="pricing">
+      <h2 class="section-title split">Straightforward plans for growing business</h2>
+      <div class="plans reveal">
+        <article class="plan plan-starter">
+          <div class="plan-body">
+            <div class="plan-head">
+              <h3>Starter</h3>
+              <p class="price"><span data-count="0" data-prefix="$">$0</span>/month</p>
+            </div>
+            <div class="plan-details" style="--list-gap:27px">
+              <p class="plan-desc">For solo operators testing the waters.</p>
+              <ul class="features-list">
+                <li><img src="assets/check.svg" width="25.7737" height="25.6323" alt="" />25 questions / month</li>
+                <li><img src="assets/check.svg" width="25.7737" height="25.6323" alt="" />Core business metrics</li>
+                <li><img src="assets/check.svg" width="25.7737" height="25.6323" alt="" />Email support</li>
+              </ul>
+            </div>
+          </div>
+          <a href="#" class="btn btn-ghost btn-block">Start free trail</a>
+        </article>
+
+        <article class="plan plan-growth">
+          <span class="badge">Most popular</span>
+          <div class="plan-body">
+            <div class="plan-head">
+              <h3>Growth</h3>
+              <p class="price"><span data-count="149" data-prefix="$">$149</span>/month</p>
+            </div>
+            <div class="plan-details" style="--list-gap:17px">
+              <p class="plan-desc">For teams making weekly, high-stakes calls.</p>
+              <ul class="features-list">
+                <li><img src="assets/check.svg" width="25.7737" height="25.6323" alt="" />Unlimited questions</li>
+                <li><img src="assets/check.svg" width="25.7737" height="25.6323" alt="" />Full data integrations</li>
+                <li><img src="assets/check.svg" width="25.7737" height="25.6323" alt="" />Actionable playbooks</li>
+                <li><img src="assets/check.svg" width="25.7737" height="25.6323" alt="" />Slack + dashboard access</li>
+                <li><img src="assets/check.svg" width="25.7737" height="25.6323" alt="" />Priority support</li>
+              </ul>
+            </div>
+          </div>
+          <a href="#" class="btn btn-dark btn-block">Get started</a>
+        </article>
+
+        <article class="plan plan-enterprise">
+          <div class="plan-body">
+            <div class="plan-head">
+              <h3>Enterprise</h3>
+              <p class="price">Custom</p>
+            </div>
+            <div class="plan-details" style="--list-gap:18px">
+              <p class="plan-desc">For organizations with complex, multi-entity data.</p>
+              <ul class="features-list">
+                <li><img src="assets/check.svg" width="25.7737" height="25.6323" alt="" /><span class="highlight">Dedicated onboarding</span></li>
+                <li><img src="assets/check.svg" width="25.7737" height="25.6323" alt="" />Custom data connectors</li>
+                <li><img src="assets/check.svg" width="25.7737" height="25.6323" alt="" />SSO &amp; advanced controls</li>
+                <li><img src="assets/check.svg" width="25.7737" height="25.6323" alt="" />Dedicated success manager</li>
+              </ul>
+            </div>
+          </div>
+          <a href="#" class="btn btn-ghost btn-block">Contact sales</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta reveal" id="faq">
+      <h2 class="split">Stop guessing start knowing</h2>
+      <p>Get clear, reliable answers from your data and make smarter decisions with confidence.</p>
+      <div class="btn-row">
+        <a href="#pricing" class="btn btn-light btn-lg">Start free trail</a>
+        <a href="#" class="btn btn-outline-light btn-md">Talk to sales</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <img class="footer-img" src="assets/footer-trees.png" alt="" aria-hidden="true" />
+      <div class="socials">
+        <a href="#" aria-label="X (Twitter)"><img src="assets/twitter.svg" width="16" height="16" alt="" /></a>
+        <a href="#" aria-label="LinkedIn"><img src="assets/linkedin.svg" width="16" height="16" alt="" /></a>
+        <a href="#" aria-label="Facebook"><img src="assets/facebook.svg" width="16" height="16" alt="" /></a>
+      </div>
+      <div class="footer-links">
+        <div><h4>Product</h4><a href="#platform">Platform</a><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#">Security</a></div>
+        <div><h4>Company</h4><a href="#">About</a><a href="#">Careers</a><a href="#">Privacy</a><a href="#">Press</a></div>
+        <div><h4>Resources</h4><a href="#">Guides</a><a href="#">Blog</a><a href="#">Help center</a></div>
+      </div>
+    </footer>
+  </div>
+  <script src="app.js?v=7"></script>
+</body>
+</html>
