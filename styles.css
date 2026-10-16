@@ -32,8 +32,8 @@ button, input { font: inherit; color: inherit; background: none; border: 0; }
 .btn:active { transform: scale(.97); }
 /* Label roll: the text slides up and an identical copy slides in from below */
 .btn-label { position: relative; display: inline-block; transition: transform .45s var(--ease-out); }
-.btn-label::after { content: attr(data-text); position: absolute; left: 0; top: 100%; padding-top: 10px; }
-.btn:hover .btn-label { transform: translateY(calc(-100% - 10px)); }
+.btn-label::after { content: attr(data-text); position: absolute; left: 0; top: 100%; padding-top: 18px; }
+.btn:hover .btn-label { transform: translateY(calc(-100% - 18px)); }
 .btn-lg { width: 193px; font-weight: 500; }
 .btn-md { width: 171px; }
 .btn-block { width: 352px; font-weight: 500; }
@@ -194,8 +194,19 @@ button, input { font: inherit; color: inherit; background: none; border: 0; }
 /* ---------- Motion ---------- */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s var(--ease-out), transform .8s var(--ease-out); transition-delay: var(--d, 0s); }
 .reveal.in { opacity: 1; transform: none; }
-.hero-visual.reveal { transform: translateY(40px) scale(.98); }
-.hero-visual.reveal.in { transform: none; }
+/* Hero image: window opens from a rounded inset while the photo settles from a zoom.
+   `translate` on the image is reserved for scroll parallax (set from JS, no transition). */
+.hero-visual { overflow: hidden; clip-path: inset(22% 9% 0 9% round 28px); transition: clip-path 1.5s cubic-bezier(0.76, 0, 0.24, 1) .2s; }
+.hero-visual.in { clip-path: inset(0 0 0 0 round 0px); }
+.hero-img { transform: scale(1.32); transition: transform 2.4s var(--ease-out) .2s; will-change: transform; }
+.hero-visual.in .hero-img { transform: scale(1.1); }
+
+/* Hero chat card: rises in sharp from a soft blur, then the question types itself */
+.chat-hero { opacity: 0; translate: -50% 48px; scale: .94; filter: blur(8px); transition: opacity .8s var(--ease-out) 1.05s, translate 1.1s var(--ease-out) 1.05s, scale 1.1s var(--ease-out) 1.05s, filter .9s var(--ease-out) 1.05s; }
+.hero-visual.in .chat-hero { opacity: 1; translate: -50% 0; scale: 1; filter: blur(0); }
+.chat-hero .icon-btn, .chat-hero .send { opacity: 0; scale: .4; transition: opacity .4s var(--ease-out), scale .6s cubic-bezier(0.34, 1.56, 0.64, 1), transform .3s var(--ease-out); }
+.chat-hero.typed .icon-btn, .chat-hero.typed .send { opacity: 1; scale: 1; }
+.chat-hero.typed .send { transition-delay: .12s; }
 
 /* Headings: words rise out of a mask one after another */
 .split .w { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: .08em; margin-bottom: -.08em; }
@@ -284,6 +295,8 @@ button, input { font: inherit; color: inherit; background: none; border: 0; }
   .reveal, .chart-line, .chart-point, .chart .grid-line, .odo-static, .split .w > span, .reveal .btn-row .btn, .menu-links a span, .menu-links a small, .menu-actions, .menu-panel, .reco-title, .tag, .reco-send, .ask-text { opacity: 1 !important; transform: none !important; translate: none !important; rotate: none !important; clip-path: none !important; transition: none !important; }
   .odo-reel.rolling .odo-strip, .step.playing * { animation: none !important; }
   .chart-pulse, .caret { display: none; }
+  .hero-visual, .hero-img { clip-path: none !important; transition: none !important; translate: none !important; }
+  .chat-hero, .chat-hero .icon-btn, .chat-hero .send { opacity: 1 !important; scale: none !important; filter: none !important; transition: none !important; }
   .menu, .menu-backdrop, .menu-toggle span { transition: none !important; }
 }
 

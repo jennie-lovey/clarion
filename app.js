@@ -191,6 +191,44 @@
     steps.forEach((s) => playIO.observe(s));
   }
 
+  // ---------- Hero image + chat card entrance ----------
+  const heroVisual = document.querySelector(".hero-visual");
+  const heroImg = heroVisual?.querySelector(".hero-img");
+  const heroChat = heroVisual?.querySelector(".chat-hero");
+  const heroInput = heroChat?.querySelector("input");
+
+  if (heroVisual) {
+    if (reduceMotion) {
+      heroVisual.classList.add("in");
+      heroChat.classList.add("typed");
+    } else {
+      const question = heroInput.dataset.type;
+      heroInput.value = "";
+      heroInput.placeholder = "";
+      requestAnimationFrame(() => requestAnimationFrame(() => heroVisual.classList.add("in")));
+      // Type once the card has risen into place.
+      setTimeout(async () => {
+        for (const ch of question) {
+          heroInput.value += ch;
+          await new Promise((r) => setTimeout(r, 34 + Math.random() * 46));
+        }
+        heroChat.classList.add("typed");
+      }, 1900);
+
+      // Gentle parallax: the photo drifts inside its frame while the frame scrolls past.
+      let ticking = false;
+      const parallax = () => {
+        ticking = false;
+        const r = heroVisual.getBoundingClientRect();
+        if (r.bottom < 0 || r.top > innerHeight) return;
+        const progress = (r.top + r.height / 2 - innerHeight / 2) / (innerHeight / 2 + r.height / 2);
+        heroImg.style.translate = `0 ${Math.max(-1, Math.min(1, progress)) * -22}px`;
+      };
+      addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(parallax); } }, { passive: true });
+      parallax();
+    }
+  }
+
   // ---------- Mobile menu modal ----------
   const root = document.documentElement;
   const toggle = document.querySelector(".menu-toggle");
