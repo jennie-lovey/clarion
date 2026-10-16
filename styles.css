@@ -348,10 +348,17 @@ button, input { font: inherit; color: inherit; background: none; border: 0; }
   .hero .btn-row .btn { flex: 1 1 0; width: auto; min-width: 0; height: 46px; font-size: 15px; }
   .hero-visual { margin: 28px 16px 0; height: 340px; }
   .chat-hero { gap: 32px; }
-  .problem { padding: 0 16px; }
-  .problem-lede { font-size: 22px; }
-  .problem-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
-  .problem-lede { grid-column: auto; }
+  .hero { padding-bottom: 0; }
+  .problem { margin-top: 36px; padding: 0 16px; gap: 20px; }
+  .problem-intro { gap: 12px; }
+  .problem-intro h2 { width: auto; }
+  .problem-lede { font-size: 20px; }
+  /* Stats sit in one compact row under the paragraph */
+  .problem-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: auto; gap: 20px 8px; }
+  .problem-lede { grid-column: 1 / -1; }
+  .stat { padding: 10px 10px 14px; gap: 10px; min-height: 92px; }
+  .stat span { font-size: 12px; line-height: 1.25; }
+  .stat strong { font-size: 22px; }
   .section-title { font-size: 32px; padding: 0 16px; }
   .features, .how, .pricing { margin-top: 100px; }
   .feature-grid, .how-grid, .plans { margin-top: 48px; }
