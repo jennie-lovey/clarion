@@ -339,10 +339,14 @@ button, input { font: inherit; color: inherit; background: none; border: 0; }
   .menu-panel { padding: 88px 16px 24px; }
   .menu-actions { display: flex; }
   .hero-copy, .hero-copy h1, .hero-copy p, .section-title, .cta h2, .cta p, .plan-desc { width: 100%; }
-  .hero-copy { padding: 80px 16px 0; }
-  .hero-copy h1 { font-size: 40px; }
+  .hero-copy { padding: 36px 16px 0; gap: 16px; }
+  /* Narrow measure so it breaks as "Get smarter / answers with AI" instead of spanning the screen */
+  .hero-copy h1 { font-size: 34px; max-width: 270px; }
+  .hero-copy p { max-width: 310px; font-size: 15px; }
   .btn-row { flex-wrap: wrap; }
-  .hero-visual { margin: 40px 16px 0; height: 360px; }
+  .hero .btn-row { flex-wrap: nowrap; gap: 10px; width: 100%; max-width: 343px; }
+  .hero .btn-row .btn { flex: 1 1 0; width: auto; min-width: 0; height: 46px; font-size: 15px; }
+  .hero-visual { margin: 28px 16px 0; height: 340px; }
   .chat-hero { gap: 32px; }
   .problem { padding: 0 16px; }
   .problem-lede { font-size: 22px; }
